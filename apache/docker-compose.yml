@@ -1,0 +1,11 @@
+version: '3'
+services:
+ ubuntu-service:
+  image: ubuntu-latest
+  build: .
+  volumes: 
+   - /mnt/c/Users/BB/Desktop/docker-setup/apache/projects:/var/www
+   - /mnt/c/Users/BB/Desktop/docker-setup/apache/apache-conf:/etc/apache2
+  ports:
+   - 8080:8080
+   - 80:80
